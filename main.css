@@ -1,0 +1,80 @@
+body
+{
+    background: #ccc;
+}
+#header a:hover
+{
+    color: #fff;
+}
+#bg-img
+{
+    background: url('../UI/computer.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    margin-top: -100px;
+}
+.navbar-nav 
+{
+    margin-left: 50%;  
+    padding: 10px;
+}
+.media img
+{
+    background: url('../UI/moki2.jpg');
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 180px;
+    background-size: 100%;
+    margin-left: 15%;
+    border-radius: 70%;
+}
+.media-body h3
+{
+    font-size: 30px;
+    margin-top: 20px;
+}
+#about
+{
+    margin-top: -150px;
+}
+#about .fa
+{
+    color: #fff;
+}
+.table
+{
+    margin-top: -15px;
+}
+.linksheading
+{
+    margin-left: 15%;
+    font: bold;
+}
+.linksheading, .social-links
+{
+ display: inline-block;
+}
+.social-links
+{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 30px;
+   
+}
+.social-links li 
+{
+    display: inline-block;
+    padding: 20px;   
+}
+.social-links img
+{
+    width: 70px;
+    height: 70px;
+}
+.footerp
+{
+    margin-left: 40%;
+    font-weight: bold;
+}
+
