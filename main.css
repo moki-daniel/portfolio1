@@ -16,7 +16,7 @@ body
 }
 .navbar-nav 
 {
-    margin-left: 50%;  
+    margin-left: 48%;  
     padding: 10px;
 }
 .media img
@@ -47,6 +47,11 @@ body
 {
 padding: 10px 20px 10px 10px;
 font-size: 20px;
+}
+.Projects
+{
+    width: 100%;
+
 }
 #about hr
 {
