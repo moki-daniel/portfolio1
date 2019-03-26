@@ -48,6 +48,11 @@ body
 padding: 10px 20px 10px 10px;
 font-size: 20px;
 }
+.Projects
+{
+    width: 100%;
+
+}
 #about hr
 {
     padding: 2px;
