@@ -58,39 +58,112 @@ border-spacing: 0;
 #header a:hover
 {
     color: green;
+    width: 100%;
 }
 #bg-img
 {
     background: url('../UI/computer.jpeg');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    min-height: 600px;
     margin-top: -100px;
-    
+    width: 100%;
+    height: calc(100px -100px);    
 }
 .navbar-nav 
 {
     margin-left: 48%;  
     padding: 10px;
-    
-    
+        
 }
 .media img
 {
     background: url('../UI/moki2.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center;
     height: 180px;
     width: 180px;
     margin-left: 15%;
     border-radius: 70%;  
-
 }
 .media-body h3
 {
     font-size: 30px;
     margin-top: 20px;
 }
+
+
+/*Phone response*/
+
+@media only screen and (min-width: 320px)
+{
+    .navbar-nav ul
+    {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    .navbar-nav ul li
+    {
+        float: left;
+        padding: 0px 15px;
+
+    }
+    .navbar-nav ul li a
+    {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    
+        
+
+.bg-img img
+{
+    background-image: url('../UI/computer.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+    .media img
+{
+    background: url('../UI/moki2.jpg');
+    background-repeat: no-repeat;
+    background-size: 20%;
+    height: 50px;
+    width: 50px;
+    border-radius: 70%;  
+
+}
+#about
+{
+    margin-left: 5%;
+    margin-top: 150px;
+}
+
+#about .fa
+{
+    color: #fff;
+}
+#about span
+{
+padding: 10px 20px 10px 10px;
+font-size: 20px;
+}
+.dac
+{
+    margin-top: 20px;
+}
+
+.table
+{
+    margin-top: -15px;
+}
+}
+
 #about
 {
     margin-top: -150px;
