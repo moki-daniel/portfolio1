@@ -53,28 +53,58 @@ border-spacing: 0;
 {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
     
 }
-#header a:hover
+nav
+{
+    width: 100%;
+    background: #080808;
+}
+ul
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+
+}
+ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+ul li:hover
+{
+    background: #e91e63;
+}
+ul li a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*#header a:hover
 {
     color: green;
     width: 100%;
-}
+}*/
+
 #bg-img
 {
     background: url('../UI/computer.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: -100px;
+    margin-top: -16px;
     width: 100%;
     height: calc(100px -100px);    
 }
-.navbar-nav 
+/*.navbar-nav 
 {
     margin-left: 48%;  
     padding: 10px;
         
-}
+}*/
 .media img
 {
     background: url('../UI/moki2.jpg');
@@ -95,26 +125,16 @@ border-spacing: 0;
 
 /*Phone response*/
 
-@media only screen and (min-width: 320px)
-{
-    .navbar-nav ul
+@media 
+only screen and (min-width: 320px)
+{ 
+    
+    /*.navbar-nav ul li a
     {
         display: block;
         margin: 0 auto;
         width: fit-content;
-    }
-    .navbar-nav ul li
-    {
-        float: left;
-        padding: 0px 15px;
-
-    }
-    .navbar-nav ul li a
-    {
-        display: block;
-        margin: 0 auto;
-        width: fit-content;
-    }
+    }*/
     
         
 
