@@ -47,7 +47,9 @@ border-collapse: collapse;
 border-spacing: 0;
 }
 
-/*My code*/
+/*-------------------------------*/
+/*---My code On Big  Screens---*/
+/*------------------------------*/
 
 *,html,body
 {
@@ -56,23 +58,38 @@ border-spacing: 0;
     font-family: sans-serif;
     
 }
+
 nav
 {
     width: 100%;
     background: rgb(59, 59, 241);
+    
+}
+.nav-h3, ul li
+{
+    display: inline-block;
+
+}
+.nav-h3
+{
+    margin-top: 15px;
+    margin-left: 7%;
+    float: left;
+    color: white;
 }
 ul
 {
     width: 80%;
     margin: 0 auto;
-    padding: 0;
-
+    padding: 0px;
+    margin-top: 30px;
+    margin-left: 37%;
 }
 ul li
 {
+    
     list-style: none;
-    display: inline-block;
-    padding: 20px;
+    padding: 10px;  
 }
 ul li:hover
 {
@@ -80,8 +97,10 @@ ul li:hover
 }
 ul li a
 {
-    color: #fff;
+   
+    color: white;
     text-decoration: none;
+    font-size: 20px;
 }
 .toggle
 {
@@ -89,32 +108,52 @@ ul li a
     padding: 10px 20px;
     background: #001f44;
     text-align: right;
+    color: white;
     box-sizing: border-box;
-    color: #fff;
     font-size: 30px;
     display: none;
 }
+
+/*------------------------------*/
+/* ---On small screens-----*/
+/*------------------------------*/
+
 @media  (max-width: 768px)
 {
+    .toggle-h3
+    {
+        float: left;
+    }
     .toggle
     {
         display: block;
     }
+    .nav-h3
+    {
+        display: none;
+    }
     ul
     {
         width: 100%;
-        display: none;
+        display: none;  
     }
     ul li
     {
         display: block;
-        text-align: center;
+        text-align: left;
+        font-size: 20px;
+    }
+    ul li:hover
+    {
+        background: #e91e63;
+        width: 28%;
     }
     .active
     {
         display: block;
     }
 }
+
 /*#header a:hover
 {
     color: green;
