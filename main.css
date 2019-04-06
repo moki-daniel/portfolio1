@@ -113,57 +113,6 @@ ul li a
     font-size: 30px;
     display: none;
 }
-
-/*------------------------------*/
-/* ---On small screens-----*/
-/*------------------------------*/
-
-@media  (max-width: 768px)
-{
-    .toggle-h3
-    {
-        float: left;
-    }
-    .toggle
-    {
-        display: block;
-    }
-    .nav-h3
-    {
-        display: none;
-    }
-    ul
-    {
-        width: 100%;
-        display: none;  
-    }
-    ul li
-    {
-        display: block;
-        text-align: left;
-        font-size: 20px;
-    }
-    ul li:hover
-    {
-        background: #e91e63;
-        width: 28%;
-    }
-    .dac
-    {
-    margin-top: 20px;
-    }
-    .active
-    {
-        display: block;
-    }
-}
-
-/*#header a:hover
-{
-    color: green;
-    width: 100%;
-}*/
-
 #bg-img
 {
     background: url('../UI/computer.jpeg');
@@ -171,7 +120,7 @@ ul li a
     background-repeat: no-repeat;
     margin-top: -16px;
     width: 100%;
-    height: calc(100px -100px);    
+    height: calc(100px -100px);  
 }
 /*.navbar-nav 
 {
@@ -179,17 +128,21 @@ ul li a
     padding: 10px;
         
 }*/
-.media img
+
+/*.media img
 {
     background: url('../UI/moki2.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
     background-position: center;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     height: 180px;
     width: 180px;
     margin-left: 15%;
     border-radius: 70%;  
-}
+}*/
+
 .media-body h3
 {
     font-size: 30px;
@@ -212,7 +165,7 @@ only screen and (min-width: 320px)
     
         
 
-.bg-img img
+/*.bg-img img
 {
     background-image: url('../UI/computer.jpeg');
     background-position: center center;
@@ -220,7 +173,7 @@ only screen and (min-width: 320px)
     background-attachment: fixed;
     background-size: cover;
     
-}
+}*/
 
     .media img
 {
@@ -341,4 +294,71 @@ margin-top: 20px;
     margin-left: 40%;
     font-weight: bold;
 }
+
+
+/*------------------------------*/
+/* ---On small screens-----*/
+/*------------------------------*/
+
+@media  (max-width: 768px)
+{
+    .toggle-h3
+    {
+        float: left;
+    }
+    .toggle
+    {
+        display: block;
+    }
+    .nav-h3
+    {
+        display: none;
+    }
+    ul
+    {
+        width: 100%;
+        display: none;  
+    }
+    ul li
+    {
+        display: block;
+        text-align: left;
+        font-size: 20px;
+    }
+    ul li:hover
+    {
+        background: #e91e63;
+        width: 32%;
+    }
+    #bg-img img
+    {
+    background: url('../UI/computer.jpeg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    }
+    #about
+    {
+    margin-left: 5%;
+    margin-top: -110px;
+    }
+
+    .dac
+    {
+    margin-top: 20px;
+    }
+    .active
+    {
+        display: block;
+    }
+}
+
+/*#header a:hover
+{
+    color: green;
+    width: 100%;
+}*/
+
 
