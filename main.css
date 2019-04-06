@@ -339,6 +339,24 @@ margin-top: 20px;
     background-attachment: fixed;
     width: 100%;
     }
+    .media img
+    {
+        background: url('../UI/moki2.jpg');
+        background-repeat: no-repeat;
+        background-size: 20%;
+        height: 50px;
+        width: 50px;
+        border-radius: 70%;  
+        margin-left: 1%;
+    }
+    .media-body
+    {
+        margin-left: 0.1%;
+    }
+    .table
+    {
+        margin-left: 1%;
+    }
     #about
     {
     margin-left: 5%;
@@ -359,23 +377,43 @@ margin-top: 20px;
     .social-links li 
     {
     display: inline-block;
-    padding: 20px;   
+    padding: 15px;   
     }
     .social-links img
     {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     }
-
+    #Experience span
+    {
+    padding: 10px 20px 10px 20px;
+    }
+    #Experience hr
+    {
+    border-width: 2px;
+    margin-top: 06px;
+    }
+    #Experience .card
+    {
+    border-top: 03px solid red;
+    }
+    .cbs, .fincom
+    {
+    margin-top: 48px;
+    }
+    .kq, .jtl
+    {
+    margin-top: 20px;
+    }
     .dac
     {
     margin-top: 20px;
     }
     .active
     {
-        display: block;
+    display: block;
     }
-}
+ }
 
 /*#header a:hover
 {
