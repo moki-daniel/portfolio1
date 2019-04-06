@@ -384,18 +384,35 @@ margin-top: 20px;
     width: 30px;
     height: 30px;
     }
-    #Experience
+    #Experience span
     {
-        width: 100%;
+    padding: 10px 20px 10px 20px;
     }
-.dac
- {
- margin-top: 20px;
- }
-.active
- {
- display: block;
- }
+    #Experience hr
+    {
+    border-width: 2px;
+    margin-top: 06px;
+    }
+    #Experience .card
+    {
+    border-top: 03px solid red;
+    }
+    .cbs, .fincom
+    {
+    margin-top: 48px;
+    }
+    .kq, .jtl
+    {
+    margin-top: 20px;
+    }
+    .dac
+    {
+    margin-top: 20px;
+    }
+    .active
+    {
+    display: block;
+    }
  }
 
 /*#header a:hover
