@@ -1,42 +1,215 @@
-body
-{
-    background: #ccc;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
 }
-#header a:hover
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/*-------------------------------*/
+/*---My code On Big  Screens---*/
+/*------------------------------*/
+
+*,html,body
 {
-    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+
+nav
+{
+    width: 100%;
+    background: rgb(59, 59, 241);
+    
+}
+.nav-h3, ul li
+{
+    display: inline-block;
+
+}
+.nav-h3
+{
+    margin-top: 15px;
+    margin-left: 7%;
+    float: left;
+    color: white;
+}
+ul
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0px;
+    margin-top: 30px;
+    margin-left: 37%;
+}
+ul li
+{
+    
+    list-style: none;
+    padding: 10px;  
+}
+ul li:hover
+{
+    background: #e91e63;
+}
+ul li a
+{
+   
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.toggle
+{
+    width: 100%;
+    padding: 10px 20px;
+    background: #001f44;
+    text-align: right;
+    color: white;
+    box-sizing: border-box;
+    font-size: 30px;
+    display: none;
 }
 #bg-img
 {
     background: url('../UI/computer.jpeg');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    min-height: 600px;
-    margin-top: -100px;
+    margin-top: -16px;
+    width: 100%;
+    height: calc(100px -100px);  
 }
-.navbar-nav 
+/*.navbar-nav 
 {
     margin-left: 48%;  
     padding: 10px;
-}
-.media img
+        
+}*/
+
+/*.media img
 {
     background: url('../UI/moki2.jpg');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     height: 180px;
     width: 180px;
-    background-size: 100%;
     margin-left: 15%;
-    border-radius: 70%;
-}
+    border-radius: 70%;  
+}*/
+
 .media-body h3
 {
     font-size: 30px;
     margin-top: 20px;
 }
+
+
+/*Phone response*/
+
+/*@media 
+only screen and (min-width: 320px)
+{ 
+    
+    /*.navbar-nav ul li a
+    {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+    }*/
+    
+        
+
+/*.bg-img img
+{
+    background-image: url('../UI/computer.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}*/
+
+    .media img
+{
+    background: url('../UI/moki2.jpg');
+    background-repeat: no-repeat;
+    background-size: 20%;
+    height: 100px;
+    width: 100px;
+    border-radius: 70%;  
+    margin-left: 1%;
+    margin-top: 25px;
+
+}
 #about
 {
-    margin-top: -150px;
+    margin-left: 5%;
+    margin-top: 150px;
+}
+
+#about .fa
+{
+    color: #fff;
+}
+#about span
+{
+padding: 10px 20px 10px 10px;
+font-size: 20px;
+}
+.table
+{
+    margin-top: -15px;
+}
+
+#about
+{
+    margin-top: -300px;
 }
 
 #about .fa
@@ -51,8 +224,6 @@ font-size: 20px;
 .Projects
 {
     width: 100%;
-    
-
 }
 .project a
 {
@@ -105,7 +276,7 @@ margin-top: 20px;
 {
     list-style: none;
     text-decoration: none;
-    margin-top: 30px;
+    margin-left: 140px;
    
 }
 .social-links li 
@@ -123,4 +294,93 @@ margin-top: 20px;
     margin-left: 40%;
     font-weight: bold;
 }
+
+
+/*------------------------------*/
+/* ---On small screens-----*/
+/*------------------------------*/
+
+@media  (max-width: 768px)
+{
+    .toggle-h3
+    {
+        float: left;
+    }
+    .toggle
+    {
+        display: block;
+    }
+    .nav-h3
+    {
+        display: none;
+    }
+    ul
+    {
+        width: 100%;
+        display: none;  
+    }
+    ul li
+    {
+        display: block;
+        text-align: left;
+        font-size: 20px;
+    }
+    ul li:hover
+    {
+        background: #e91e63;
+        width: 32%;
+    }
+    #bg-img img
+    {
+    background: url('../UI/computer.jpeg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    }
+    #about
+    {
+    margin-left: 5%;
+    margin-top: -110px;
+    }
+    .linksheading
+    {
+    margin-left: 30%;
+    font: bold;
+    }
+    .social-links
+    {
+    list-style: none;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-left: 20px;
+    }
+    .social-links li 
+    {
+    display: inline-block;
+    padding: 20px;   
+    }
+    .social-links img
+    {
+    width: 35px;
+    height: 35px;
+    }
+
+    .dac
+    {
+    margin-top: 20px;
+    }
+    .active
+    {
+        display: block;
+    }
+}
+
+/*#header a:hover
+{
+    color: green;
+    width: 100%;
+}*/
+
 
