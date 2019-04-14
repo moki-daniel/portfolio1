@@ -149,32 +149,6 @@ ul li a
     margin-top: 20px;
 }
 
-
-/*Phone response*/
-
-/*@media 
-only screen and (min-width: 320px)
-{ 
-    
-    /*.navbar-nav ul li a
-    {
-        display: block;
-        margin: 0 auto;
-        width: fit-content;
-    }*/
-    
-        
-
-/*.bg-img img
-{
-    background-image: url('../UI/computer.jpeg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    
-}*/
-
 .media img
 {
     background: url('../UI/moki2.jpg');
@@ -206,9 +180,9 @@ font-size: 20px;
 {
     margin-top: -15px;
 }
+/*Education section table*/
 .educationtable
 {
-   /* border: 1px solid black;*/
     border-collapse: collapse;
     opacity: 0.95%;
     width: 100%;
@@ -229,11 +203,6 @@ th
    padding: 10px;
    background: #e8e8e8;
 }
-/*.educationtable td
-{
-    text-align: center;
-}*/
-
 #about
 {
     margin-top: -300px;
@@ -384,17 +353,19 @@ margin-top: 20px;
     {
         margin-left: 1%;
     }
+
+    /* Education section table*/
+
     .educationtable
-{
-   /* border: 1px solid black;*/
+    {
     border-collapse: collapse;
     width: 100%;
     margin-right: 2%;
     overflow-x: auto;
     text-align: center;
-}
-th
-{
+   }
+   th
+   {
     background: red;
     color: white;
     font-size: 10px;
