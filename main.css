@@ -122,26 +122,6 @@ ul li a
     width: 100%;
     height: calc(100px -100px);  
 }
-/*.navbar-nav 
-{
-    margin-left: 48%;  
-    padding: 10px;
-        
-}*/
-
-/*.media img
-{
-    background: url('../UI/moki2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 180px;
-    width: 180px;
-    margin-left: 15%;
-    border-radius: 70%;  
-}*/
 
 .media-body h3
 {
@@ -433,10 +413,6 @@ margin-top: 20px;
     }
  }
 
-/*#header a:hover
-{
-    color: green;
-    width: 100%;
-}*/
+
 
 
