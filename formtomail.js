@@ -1,5 +1,7 @@
 $('#Hire').submit(function(e){
 
+    //variables for the code
+
  var name = document.getElementById('inputName'),
     email = document.getElementById('inputEmail'),
     phonenumber = document.getElementById('inputPhonenumber'),
@@ -7,9 +9,12 @@ $('#Hire').submit(function(e){
     description = document.getElementById('inputDescription'),
     timeline = document.getElementById('inputTimeline'),
     budget = document.getElementById('inputBudget');
+
+    //if no information keyed in
     if (!name.value || !email.value || !phonenumber.value || !subject.value 
         || !description.value || !timeline.value || !budget.value)
         {
+            //error message
         alertify.error('Please check your entries again')
     }
     else
@@ -23,6 +28,7 @@ $('#Hire').submit(function(e){
         });
         e.preventDefault()
         $(this).get(0).reset()
+        //success message
         alertify.success('message sent')
 
     }
