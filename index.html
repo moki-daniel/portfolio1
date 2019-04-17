@@ -12,8 +12,7 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="bootstrapjquery.js"></script>
         <script src="bootstrap.js"></script>
-         <!-- links to the email connection file-->
-        <script src="formtomail.js"></script>
+         
 
         
         <!-- Latest compiled and minified CSS -->
@@ -360,8 +359,8 @@
         
         
         <!--Hire me form-->
-        <div id ="Hire">
-            <div class="container mt-5">
+        <form id ="Hire" class="mt-5">
+            <div class="container">
                 <span class="bg-dark text-white"> Hire Me</span><hr class="bg-dark">
                 <div class="row">
                     <div class="col">
@@ -372,29 +371,36 @@
                             <h4 class="my-4">Hire me by filling the form below</h4>
                              <!--Input fields-->
                             <div class="form-group">
-                                <input type="text" placeholder="Name" class="form-control">
+                                <input type="text" class="form-control" placeholder="Name" 
+                                id="inputName" name="name">
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Email" class="form-control">
+                                <input type="text" class="form-control" placeholder="Email"  
+                                id="inputEmail" name="email">
                             </div>
                             <div class="form-group">
-                                <input type="number" placeholder="Phonenumber" class="form-control">
+                                <input type="number" class="form-control" placeholder="Phonenumber" 
+                                id="inputPhonenumber" name="phonenumber">
                             </div>
                             <!--Subject-->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Subject"></textarea>
+                                <textarea class="form-control" placeholder="Subject" id="inputSubject" 
+                                name="subject"></textarea>
                             </div>
                             <!--Description-->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Description"></textarea>
+                                <textarea class="form-control" placeholder="Description" id="inputDescription" 
+                                name="description"></textarea>
                             </div>
                             <!--Project timeline-->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Timeline"></textarea>
+                                <textarea class="form-control" placeholder="Timeline" id="inputTimeline" 
+                                name="timeline"></textarea>
                             </div>
                             <!--Budget-->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Budget"></textarea>
+                                <textarea class="form-control" placeholder="Budget" id="inputBudget" 
+                                name="budget"></textarea>
                             </div>
                             <!--Button-->
                             <div class="form-group">
@@ -406,6 +412,7 @@
             </div>
         </div>
     </div>
+</form>
 
 <!--footer-->
                 <div class="container-fluid bg-dark text-white mt-5">
@@ -425,6 +432,8 @@
                     })
 
                 })</script>
+        <!-- links to the email connection file-->
+        <script src="formtomail.js"></script>
 
             </body>
             </html>
