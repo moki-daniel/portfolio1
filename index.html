@@ -13,6 +13,34 @@
         <script src="bootstrapjquery.js"></script>
         <script src="bootstrap.js"></script>
          
+        <script>
+            $(document).ready(function(){
+                $(form).submit(function(event){
+                    event.preventDefault();
+                    var name = $("#inputName").val();
+                    var email = $("#inputEmail").val();
+                    var phonenumber = $("#inputPhonenumber").val();
+                    var subject = $("#inputSubject").val();
+                    var description = $("#inputDescription").val();
+                    var timeline = $("#inputTimeline").val();
+                    var budget = $("#inputBudget").val();
+                    var submit = $("#mailSubmit").val();
+                    $(".form-message").load("mail.php",{
+                        name:name,
+                        email:email,
+                        phonenumber:phonenumber,
+                        subject:subject,
+                        description:description,
+                        timeline:timeline,
+                        budget:budget,
+                        submit:submit
+                    });
+                });
+            });
+            
+
+        </script>
+         
 
         
         <!-- Latest compiled and minified CSS -->
@@ -130,7 +158,7 @@
                                 <div class="container mt-5">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="bg-danger text-white">About me</span><hr class=bg-danger>
+                                            <span class="bg-danger text-white">About me</span><hr class="bg-danger">
                                             <p class="lead text-justify">I am a web developer with a vast array of knowledge in many different
                                             front end and backend languages, responsive frameworks, databases and best
                                         code practices. My objective is to be the best technical leader not only in web development 
@@ -359,7 +387,7 @@
         
         
         <!--Hire me form-->
-        <form id ="Hire" class="mt-5">
+        <form action="mail.php" method="POST" enctype="text/plain" id ="Hire" class="mt-5">
             <div class="container">
                 <span class="bg-dark text-white"> Hire Me</span><hr class="bg-dark">
                 <div class="row">
@@ -411,8 +439,9 @@
                             </div>
                             <!--Button-->
                             <div class="form-group">
-                                <button class="btn btn-success text-white">Submit</button>
+                                <button id="mailSubmit"class="btn btn-success text-white" name="submit">Submit</button>
                             </div>
+                            <p class="form-message"></p>
                         </div>
                     </div>
                 </div>
@@ -422,25 +451,23 @@
 </form>
 
 <!--footer-->
-                <div class="container-fluid bg-dark text-white mt-5">
-                    <div class="row">
-                        <div class="col">
-                            <div class="container">
-                                <p class="pt-3 text-center">Website designed by: Moki-Daniel in March 2019</p>
-                            </div>
-                        </div>
-                    </div>
+<div class="container-fluid bg-dark text-white mt-5">
+    <div class="row">
+        <div class="col">
+            <div class="container">
+                <p class="pt-3 text-center">Website designed by: Moki-Daniel in March 2019</p>
                 </div>
-                <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
-                <script type="text/javascript">
-                $(document).ready(function(){
-                    $('.menu').click(function(){
-                        $('ul').toggleClass('active');
-                    })
-
-                })</script>
-        <!-- links to the email connection file-->
-        <script src="formtomail.js"></script>
-
-            </body>
-            </html>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('.menu').click(function(){
+    $('ul').toggleClass('active');
+    })
+    })</script>
+   
+    
+</body>
+</html>
