@@ -1,7 +1,9 @@
-<!--Hire me form-->
+<!--Hire me form validation-->
+
+<?php include('form_process.php'); ?>
 
 <link rel="stylesheet" href="main.css">
-<form action="mailto: devmoki@gmail.com" method="POST" enctype="text/plain" id ="Hire" class="mt-5">
+<form id ="Hire" action="<?= $_server['PHP_SELF']; ?>" method="POST" enctype="text/plain" class="mt-5">
 <div class="container">
     <span class="bg-dark text-white"> Hire Me</span><hr class="bg-dark">
     <div class="row">
