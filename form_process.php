@@ -4,7 +4,7 @@ print_r($_POST);
 //define variables and set to empty values
 
 $name_error = $email_error = $phonenumber_error = $subject_error = $description_error = $timeline_error = $budget_error = "";
-$name = $email = $phonenumber = $subject = $description = $timeline = $budget = "";
+$name = $email = $phonenumber = $subject = $description = $timeline = $budget = $success = "";
 
 //form is sumbmitted with POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -58,11 +58,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {  
   $budget = test_input($_POST["budget"]);
   }
+  if ($name_error == '' and $email_error == '' and $phonenumber_error == '' 
+  and $subject_error =='' and $description_error =='' and $timeline_error =='' and $budget_error == '')
+  {
+      $message_body = '';
+      unset($_POST['submit']);
+      foreach ($_POST as $key => $value){
+          $message_body .= "$key: $value\n";
+      }
+      $to = 'devmoki@gmail.com';
+      $subject = 'hireme Form Submit';
+      if (mail($to, $subject, $message)){
+          $success = "Message sent, thank you for hiring me, I will 
+          get back to you within 24hrs";
+          $name = $email = $phonenumber = $subject = $description = $timeline = $budget = '';
+      }
+  }
  }
+
  function test_input($data){
      $data = trim($data);
      $data = stripslashes($data);
      $data = htmlspecialchars($data);
      return $data;
  }
+
 ?>
