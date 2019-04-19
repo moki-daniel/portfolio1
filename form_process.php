@@ -12,7 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name_error = "Name is required";
     } else {
         $name = test_input($_POST["name"]);
-
+        //check if the name has letters and whitespace
+        if (!preg_match("/^[a-zA-Z\. ]*$/", $name)){
+        $name_error = "only letters and white-space needed";
+        }
     }
     if (empty($_POST["email"])){
         $email_error = "Name is required";
@@ -27,8 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phonenumber_error = "phone-number is required";
     } else {  
     $phonenumber = test_input($_POST["phonenumber"]);
-    }
-   }
+    //check if phone is correct
+   if (!preg_match(/^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/gm, $phonenumber)){
+       $phonenumber_error = "Enter valid phone-number";
+   } 
+}
    if (empty($_POST[subject]))
    $subject_error = "subject is required";
    } else {  
