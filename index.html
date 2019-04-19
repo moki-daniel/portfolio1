@@ -13,36 +13,6 @@
         <script src="bootstrapjquery.js"></script>
         <script src="bootstrap.js"></script>
          
-        <script>
-            $(document).ready(function(){
-                $(form).submit(function(event){
-                    event.preventDefault();
-                    var name = $("#inputName").val();
-                    var email = $("#inputEmail").val();
-                    var phonenumber = $("#inputPhonenumber").val();
-                    var subject = $("#inputSubject").val();
-                    var description = $("#inputDescription").val();
-                    var timeline = $("#inputTimeline").val();
-                    var budget = $("#inputBudget").val();
-                    var submit = $("#mailSubmit").val();
-                    $(".form-message").load("mail.php",{
-                        name:name,
-                        email:email,
-                        phonenumber:phonenumber,
-                        subject:subject,
-                        description:description,
-                        timeline:timeline,
-                        budget:budget,
-                        submit:submit
-                    });
-                });
-            });
-            
-
-        </script>
-         
-
-        
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -55,7 +25,35 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!--<script src="formtomail.js"></script>-->
 
+        <!--<script>
+                $(document).ready(function(){
+                    $(form).submit(function(event){
+                        event.preventDefault();
+                        var name = $("#inputName").val();
+                        var email = $("#inputEmail").val();
+                        var phonenumber = $("#inputPhonenumber").val();
+                        var subject = $("#inputSubject").val();
+                        var description = $("#inputDescription").val();
+                        var timeline = $("#inputTimeline").val();
+                        var budget = $("#inputBudget").val();
+                        var submit = $("#mailSubmit").val();
+                        $(".form-message").submit("devmoki@gmail.com",{
+                            name:name,
+                            email:email,
+                            phonenumber:phonenumber,
+                            subject:subject,
+                            description:description,
+                            timeline:timeline,
+                            budget:budget,
+                            submit:submit
+                        });
+                    });
+                });
+                
+    
+            </script>-->
     </head>
     <body>
 
@@ -387,7 +385,7 @@
         
         
         <!--Hire me form-->
-        <form action="mail.php" method="POST" enctype="text/plain" id ="Hire" class="mt-5">
+        <form action="mailto: devmoki@gmail.com" method="POST" enctype="text/plain" id ="Hire" class="mt-5">
             <div class="container">
                 <span class="bg-dark text-white"> Hire Me</span><hr class="bg-dark">
                 <div class="row">
