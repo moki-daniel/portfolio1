@@ -9,13 +9,11 @@
         <link rel="stylesheet" a href="bootstrap.css"/>
         <link rel="stylesheet" a href="fonts.css"/>
         <link rel="stylesheet" href="main.css">
+        <!--<link rel="stylesheet" href="form.php">-->
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="bootstrapjquery.js"></script>
         <script src="bootstrap.js"></script>
-         <!-- links to the email connection file-->
-        <script src="formtomail.js"></script>
-
-        
+         
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -28,7 +26,35 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!--<script src="formtomail.js"></script>-->
 
+        <!--<script>
+                $(document).ready(function(){
+                    $(form).submit(function(event){
+                        event.preventDefault();
+                        var name = $("#inputName").val();
+                        var email = $("#inputEmail").val();
+                        var phonenumber = $("#inputPhonenumber").val();
+                        var subject = $("#inputSubject").val();
+                        var description = $("#inputDescription").val();
+                        var timeline = $("#inputTimeline").val();
+                        var budget = $("#inputBudget").val();
+                        var submit = $("#mailSubmit").val();
+                        $(".form-message").submit("devmoki@gmail.com",{
+                            name:name,
+                            email:email,
+                            phonenumber:phonenumber,
+                            subject:subject,
+                            description:description,
+                            timeline:timeline,
+                            budget:budget,
+                            submit:submit
+                        });
+                    });
+                });
+                
+    
+            </script>-->
     </head>
     <body>
 
@@ -131,7 +157,7 @@
                                 <div class="container mt-5">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="bg-danger text-white">About me</span><hr class=bg-danger>
+                                            <span class="bg-danger text-white">About me</span><hr class="bg-danger">
                                             <p class="lead text-justify">I am a web developer with a vast array of knowledge in many different
                                             front end and backend languages, responsive frameworks, databases and best
                                         code practices. My objective is to be the best technical leader not only in web development 
@@ -311,13 +337,13 @@
                         </div>
                     </div>
                    
-                        <div class="kq col-lg-6">
-                                <div class="card bg-white">
-                                    <img src="kq.png" width="200" height="80" class="img-fluid m-auto py-3">
-                                    <h3 class="text-center text-success">Internship, Network department – May 2009 to August 2009</h3>
-                                    <p class="lead text-justify p-3">Involved in Trunking and cabling, Termination of tailor made straight and cross through network
-                                    cables, Routing and re-routing of telephone signals, Activation and de-activation of voice and
-                                    data outlets, Planning and re-organization of network cabinets, Survey and design of network
+                <div class="kq col-lg-6">
+                    <div class="card bg-white">
+                        <img src="kq.png" width="200" height="80" class="img-fluid m-auto py-3">
+                        <h3 class="text-center text-success">Internship, Network department – May 2009 to August 2009</h3>
+                        <p class="lead text-justify p-3">Involved in Trunking and cabling, Termination of tailor made straight and cross through network
+                            cables, Routing and re-routing of telephone signals, Activation and de-activation of voice and
+                            data outlets, Planning and re-organization of network cabinets, Survey and design of network
                                     points and structured cabling, Inventory preparation and data recording, Network support for
                                     both local and wide area network, Maintenance of server room information system
                                     equipment’s, Network troubleshooting, administration and implementation of network device</p>
@@ -343,7 +369,7 @@
                 <!--DIV added to make contact form 100%-->
                 </div>
 
-                <!--Competitions-->
+        <!--Competitions-->
         <div id="Competitions" class="mt-5">
             <div class="container">
                 <span class="bg-primary text-white">Competitions</span><hr class="bg-primary"> 
@@ -357,74 +383,111 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
         <!--Hire me form-->
-        <div id ="Hire">
-            <div class="container mt-5">
+        <form id="Hire" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
+        action="https://script.google.com/macros/s/AKfycbzh-OheVndn5a8LWUdQRKhPV7LJrMfCBOwJUcIR/exec" 
+        onSubmit="alert('Thank you for the job, I will get back to you within 24hrs, kindly click ok button below to submit your request.');">
+
+        <!--<form id ="Hire" data-email="devmoki@gmail.com" 
+        action="https://script.google.com/macros/s/AKfycbyqVviOmPC1J9Za-PSNWBc3KbvmEQ8h5Rv2mCn1wbvI_cSDwnI3/exec" 
+        method="POST" enctype="text/plain" class="mt-5">-->
+            <div class="container">
                 <span class="bg-dark text-white"> Hire Me</span><hr class="bg-dark">
                 <div class="row">
                     <div class="col">
                         <div class="card bg-white">
         
-                            <!--Heading-->
+                           <!-- Heading-->
                         <div class="card-header">
                             <h4 class="my-4">Hire me by filling the form below</h4>
                              <!--Input fields-->
                             <div class="form-group">
-                                <input type="text" placeholder="Name" class="form-control">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" placeholder="Enter your full-names" id="inputName" name="name" tabindex="1">
+                               
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Email" class="form-control">
+                                <label for="inputEmail">Email</label>
+                                <input type="text" class="form-control" placeholder="Enter your E-mail"  
+                                id="inputEmail" name="email">
                             </div>
                             <div class="form-group">
-                                <input type="number" placeholder="Phonenumber" class="form-control">
+                                <label for="inputPhonenumber">Phone-number</label>
+                                <input type="text" class="form-control" placeholder="Phone-number" 
+                                id="inputPhonenumber" name="phonenumber">
                             </div>
                             <!--Subject-->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Subject"></textarea>
+                                <label for="inputSubject">Subject</label>
+                                <textarea class="form-control" type="text" placeholder="Project title" id="inputSubject" 
+                                name="subject"></textarea>
                             </div>
-                            <!--Description-->
+                              <!--Description-->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Description"></textarea>
+                                <label for="inputDescription">Description</label>
+                                <textarea class="form-control" type="text" placeholder="Describe the task to be done here" 
+                                id="inputDescription" name="description"></textarea>
                             </div>
-                            <!--Project timeline-->
+                           <!--Project timeline-->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Timeline"></textarea>
+                                <label for="inputTimeline">Timeline</label>
+                                <textarea class="form-control" type="text" placeholder="When should the project be completed?" 
+                                id="inputTimeline" name="timeline"></textarea>
                             </div>
-                            <!--Budget-->
+                          <!--Budget-->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Budget"></textarea>
+                                    <label for="inputBudget">Budget</label>
+                                <textarea class="form-control" type="text" placeholder="What is your budget?" id="inputBudget" 
+                                name="budget"></textarea>
                             </div>
-                            <!--Button-->
+                           <!--Button-->
                             <div class="form-group">
-                                <button class="btn btn-success text-white">Submit</button>
+                                <button id="mailSubmit"class="btn btn-success text-white" 
+                                onclick = "get('Your request has been fully submitted, I get back to you within 24hrs')"
+                                type="submit" name="submit">Submit</button>
+                            </div>
+                            <!-- Customise the Thankyou Message People See when they submit the form: -->
+                            <div style="display:none;" id="thankyou_message">
+                                <h2>
+                                    <em>Thanks</em> for cotacting me!
+                                    I will get back to you within 24hrs!
+                                </h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+</form>
+ <!-- Submit the Form to Google Using "AJAX" -->
+ <script data-cfasync="false" src="form-submission-handler.js"></script>
+
+<!--Script for submittting email-->
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
 
 <!--footer-->
-                <div class="container-fluid bg-dark text-white mt-5">
-                    <div class="row">
-                        <div class="col">
-                            <div class="container">
-                                <p class="pt-3 text-center">Website designed by: Moki-Daniel in March 2019</p>
-                            </div>
-                        </div>
-                    </div>
+<div class="container-fluid bg-dark text-white mt-5">
+    <div class="row">
+        <div class="col">
+            <div class="container">
+                <p class="pt-3 text-center">Website designed by: Moki-Daniel in March 2019</p>
                 </div>
-                <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
-                <script type="text/javascript">
-                $(document).ready(function(){
-                    $('.menu').click(function(){
-                        $('ul').toggleClass('active');
-                    })
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('.menu').click(function(){
+    $('ul').toggleClass('active');
+    })
+    })</script>
 
-                })</script>
 
-            </body>
-            </html>
+   
+    
+</body>
+</html>
