@@ -407,9 +407,10 @@
                              <!--Input fields-->
                             <div class="form-group">
                                 <label for="inputName">Name</label>
-                                <input type="text" class="form-control" placeholder="Enter your full-names" id="inputName" 
-                                name="name" tabindex="1">
-                                <div id="name_error" class="val_error"></div>
+                                <input type="text" class="form-control" placeholder="Enter your full-name" id="inputName" 
+                                name="username" tabindex="1">
+                                <div id="username_error" class="val_error"></div>
+                                <!--<div class="textInput"></div>-->
                                
                             </div>
                             <div class="form-group">
@@ -417,12 +418,14 @@
                                 <input type="text" class="form-control" placeholder="Enter your E-mail"  
                                 id="inputEmail" name="email">
                                 <div id="email_error" class="val_error"></div>
+                                <!--<div class="textInput"></div>-->
                             </div>
                             <div class="form-group">
                                 <label for="inputPhonenumber">Phone-number</label>
                                 <input type="text" class="form-control" placeholder="Phone-number" 
                                 id="inputPhonenumber" name="phonenumber">
                                 <div id="phone_error" class="val_error"></div>
+                                <!--<div class="textInput"></div>-->
                             </div>
                             <!--Subject-->
                             <div class="form-group">
@@ -430,6 +433,7 @@
                                 <textarea class="form-control" type="text" placeholder="Project title" id="inputSubject" 
                                 name="subject"></textarea>
                                 <div id="subject_error" class="val_error"></div>
+                               <!--<div class="textInput"></div>-->
                             </div>
 
                             <!--Description-->
@@ -438,6 +442,7 @@
                                 <textarea class="form-control" type="text" placeholder="Describe the task to be done here" 
                                 id="inputDescription" name="description"></textarea>
                                 <div id="description_error" class="val_error"></div>
+                               <!--<div class="textInput"></div>-->
                             </div>
 
                            <!--Project timeline-->
@@ -446,6 +451,7 @@
                                 <textarea class="form-control" type="text" placeholder="When should the project be completed?" 
                                 id="inputTimeline" name="timeline"></textarea>
                                 <div id="timeline_error" class="val_error"></div>
+                                <!--<div class="textInput"></div>-->
                             </div>
 
                           <!--Budget-->
@@ -454,6 +460,7 @@
                                 <textarea class="form-control" type="text" placeholder="What is your budget?" id="inputBudget" 
                                 name="budget"></textarea>
                                 <div id="budget_error" class="val_error"></div>
+                              <!--<div class="textInput"></div>-->
                             </div>
 
                            <!--Button-->
@@ -482,7 +489,7 @@
 <script type = "text/javascript">
 
 //GETTING ALL INPUT TEXT OBJECTS
-var name = document.forms["vform"]["name"];
+var username = document.forms["vform"]["username"];
 var email = document.forms["vform"]["email"];
 var phonenumber = document.forms["vform"]["phonenumber"];
 var subject = document.forms["vform"]["subject"];
@@ -491,7 +498,7 @@ var timeline = document.forms["vform"]["timeline"];
 var budget = document.forms["vform"]["budget"];
 
 //GETTING ALL ERROR DISPLAY OBJECTS
-var name_error = document.getElementById("name_error");
+var username_error = document.getElementById("username_error");
 var email_error = document.getElementById("email_error");
 var phone_error = document.getElementById("phone_error");
 var subject_error = document.getElementById("subject_error");
@@ -500,7 +507,7 @@ var timeline_error = document.getElementById("timeline_error");
 var budget_error = document.getElementById("budget_error");
 
 //SETTING ALL EVENT LISTENERS
-name.addEventListener("blur", nameverify, true);
+username.addEventListener("blur", usernameverify, true);
 email.addEventListener("blur", emailverify, true);
 phonenumber.addEventListener("blur", phonenumberverify, true);
 subject.addEventListener("blur", subjectverify, true);
@@ -511,10 +518,10 @@ budget.addEventListener("blur", budgetverify, true);
 //Validation function
 function Validate() {
     //username validation
-    if (name.value == ""){
-        name.style.border ="1px solid red";
-        name_error.textContent ="Your full-name is required";
-        name.focus();
+    if (username.value == ""){
+        username.style.border ="1px solid red";
+        username_error.textContent ="Your full-name is required";
+        username.focus();
         return false;
     }
     //email validation
@@ -561,6 +568,56 @@ function Validate() {
         budget_error.textContent ="Budget is required";
         budget.focus();
         return false;
+    }
+}
+//event handler funtions
+function nameverify(){
+    if(username.value !=""){
+        username.style.border = "1px solid #5e6e66";
+        username_error.innerHTML = "";
+        return true;
+    }
+}
+function emailverify(){
+    if(email.value !=""){
+        email.style.border = "1px solid #5e6e66";
+        email_error.innerHTML = "";
+        return true;
+    }
+}
+function phonenumberverify(){
+    if(phonenumber.value !=""){
+        phonenumber.style.border = "1px solid #5e6e66";
+        phone_error.innerHTML = "";
+        return true;
+    }
+}
+function subjectverify(){
+    if(subject.value !=""){
+        subject.style.border = "1px solid #5e6e66";
+        subject_error.innerHTML = "";
+        return true;
+    }
+}
+function descriptionverify(){
+    if(description.value !=""){
+        description.style.border = "1px solid #5e6e66";
+        description_error.innerHTML = "";
+        return true;
+    }
+}
+function timelineverify(){
+    if(timeline.value !=""){
+        timeline.style.border = "1px solid #5e6e66";
+        timeline_error.innerHTML = "";
+        return true;
+    }
+}
+function budgetverify(){
+    if(budget.value !=""){
+        budget.style.border = "1px solid #5e6e66";
+        budget_error.innerHTML = "";
+        return true;
     }
 }
 </script>
