@@ -484,7 +484,7 @@
     </fieldset>
 </form>
 
-<!--Adding Javascript code for Validation-->
+<!--JAVASCRIPT CODE FOR VALIDATION-->
 
 <script type = "text/javascript">
 
@@ -571,13 +571,16 @@ function Validate() {
     }
 }
 //event handler funtions
-function nameverify(){
+
+//username
+function usernameverify(){
     if(username.value !=""){
         username.style.border = "1px solid #5e6e66";
         username_error.innerHTML = "";
         return true;
     }
 }
+//email
 function emailverify(){
     if(email.value !=""){
         email.style.border = "1px solid #5e6e66";
@@ -585,6 +588,7 @@ function emailverify(){
         return true;
     }
 }
+//phone-number
 function phonenumberverify(){
     if(phonenumber.value !=""){
         phonenumber.style.border = "1px solid #5e6e66";
@@ -592,6 +596,7 @@ function phonenumberverify(){
         return true;
     }
 }
+//subject
 function subjectverify(){
     if(subject.value !=""){
         subject.style.border = "1px solid #5e6e66";
@@ -599,6 +604,7 @@ function subjectverify(){
         return true;
     }
 }
+//description
 function descriptionverify(){
     if(description.value !=""){
         description.style.border = "1px solid #5e6e66";
@@ -606,6 +612,7 @@ function descriptionverify(){
         return true;
     }
 }
+//timeline
 function timelineverify(){
     if(timeline.value !=""){
         timeline.style.border = "1px solid #5e6e66";
@@ -613,6 +620,7 @@ function timelineverify(){
         return true;
     }
 }
+//budget
 function budgetverify(){
     if(budget.value !=""){
         budget.style.border = "1px solid #5e6e66";
