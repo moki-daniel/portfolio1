@@ -511,13 +511,60 @@ budget.addEventListener("blur", budgetverify, true);
 //Validation function
 function Validate() {
     //username validation
+    if (name.value == ""){
+        name.style.border ="1px solid red";
+        name_error.textContent ="Your full-name is required";
+        name.focus();
+        return false;
+    }
+    //email validation
+    if (email.value == ""){
+        email.style.border ="1px solid red";
+        email_error.textContent ="Your E-mail is required";
+        email.focus();
+        return false;
+    }
+     //phone-number validation
+     if (phonenumber.value == ""){
+        phonenumber.style.border ="1px solid red";
+        phone_error.textContent ="Your phone-number is required";
+        phonenumber.focus();
+        return false;
+    }
+      //subject validation
+      if (subject.value == ""){
+        subject.style.border ="1px solid red";
+        subject_error.textContent ="Subject is required";
+        subject.focus();
+        return false;
+    }
 
+     //description validation
+     if (description.value == ""){
+        description.style.border ="1px solid red";
+        description_error.textContent ="Description is required";
+        description.focus();
+        return false;
+    }
 
+     //timeline validation
+     if (timeline.value == ""){
+        timeline.style.border ="1px solid red";
+        timeline_error.textContent ="Timeline is required";
+        timeline.focus();
+        return false;
+    }
 
+  //Budget validation
+  if (budget.value == ""){
+        budget.style.border ="1px solid red";
+        budget_error.textContent ="Budget is required";
+        budget.focus();
+        return false;
+    }
 }
-
-
 </script>
+
  <!-- Submit the Form to Google Using "AJAX" -->
  <script data-cfasync="false" src="form-submission-handler.js"></script>
 
