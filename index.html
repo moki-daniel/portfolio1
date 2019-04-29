@@ -386,9 +386,11 @@
 
 
         <!--Hire me form-->
+
         <form id="Hire" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
-        action="https://script.google.com/macros/s/AKfycbzh-OheVndn5a8LWUdQRKhPV7LJrMfCBOwJUcIR/exec" 
-        onSubmit="alert('Thank you for the job, I will get back to you within 24hrs, kindly click ok button below to submit your request.');">
+        action="https://script.google.com/macros/s/AKfycbzh-OheVndn5a8LWUdQRKhPV7LJrMfCBOwJUcIR/exec" name="vform"
+        onSubmit = "return Validate()">
+        <fieldset>
 
         <!--<form id ="Hire" data-email="devmoki@gmail.com" 
         action="https://script.google.com/macros/s/AKfycbyqVviOmPC1J9Za-PSNWBc3KbvmEQ8h5Rv2mCn1wbvI_cSDwnI3/exec" 
@@ -405,43 +407,62 @@
                              <!--Input fields-->
                             <div class="form-group">
                                 <label for="inputName">Name</label>
-                                <input type="text" class="form-control" placeholder="Enter your full-names" id="inputName" name="name" tabindex="1">
+                                <input type="text" class="form-control" placeholder="Enter your full-name" id="inputName" 
+                                name="username" tabindex="1">
+                                <div id="username_error" class="val_error"></div>
+                                <!--<div class="textInput"></div>-->
                                
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail">Email</label>
                                 <input type="text" class="form-control" placeholder="Enter your E-mail"  
                                 id="inputEmail" name="email">
+                                <div id="email_error" class="val_error"></div>
+                                <!--<div class="textInput"></div>-->
                             </div>
                             <div class="form-group">
                                 <label for="inputPhonenumber">Phone-number</label>
                                 <input type="text" class="form-control" placeholder="Phone-number" 
                                 id="inputPhonenumber" name="phonenumber">
+                                <div id="phone_error" class="val_error"></div>
+                                <!--<div class="textInput"></div>-->
                             </div>
                             <!--Subject-->
                             <div class="form-group">
                                 <label for="inputSubject">Subject</label>
                                 <textarea class="form-control" type="text" placeholder="Project title" id="inputSubject" 
                                 name="subject"></textarea>
+                                <div id="subject_error" class="val_error"></div>
+                               <!--<div class="textInput"></div>-->
                             </div>
-                              <!--Description-->
+
+                            <!--Description-->
                             <div class="form-group">
                                 <label for="inputDescription">Description</label>
                                 <textarea class="form-control" type="text" placeholder="Describe the task to be done here" 
                                 id="inputDescription" name="description"></textarea>
+                                <div id="description_error" class="val_error"></div>
+                               <!--<div class="textInput"></div>-->
                             </div>
+
                            <!--Project timeline-->
                             <div class="form-group">
                                 <label for="inputTimeline">Timeline</label>
                                 <textarea class="form-control" type="text" placeholder="When should the project be completed?" 
                                 id="inputTimeline" name="timeline"></textarea>
+                                <div id="timeline_error" class="val_error"></div>
+                                <!--<div class="textInput"></div>-->
                             </div>
+
                           <!--Budget-->
                             <div class="form-group">
                                     <label for="inputBudget">Budget</label>
                                 <textarea class="form-control" type="text" placeholder="What is your budget?" id="inputBudget" 
                                 name="budget"></textarea>
+                                <div id="budget_error" class="val_error"></div>
+                              <!--<div class="textInput"></div>-->
                             </div>
+
                            <!--Button-->
                             <div class="form-group">
                                 <button id="mailSubmit"class="btn btn-success text-white" 
@@ -451,7 +472,7 @@
                             <!-- Customise the Thankyou Message People See when they submit the form: -->
                             <div style="display:none;" id="thankyou_message">
                                 <h2>
-                                    <em>Thanks</em> for cotacting me!
+                                    <em>Thanks</em> for contacting me!
                                     I will get back to you within 24hrs!
                                 </h2>
                             </div>
@@ -460,7 +481,155 @@
                 </div>
             </div>
         </div>
+    </fieldset>
 </form>
+
+<!--JAVASCRIPT CODE FOR VALIDATION-->
+
+<script type = "text/javascript">
+
+//GETTING ALL INPUT TEXT OBJECTS
+var username = document.forms["vform"]["username"];
+var email = document.forms["vform"]["email"];
+var phonenumber = document.forms["vform"]["phonenumber"];
+var subject = document.forms["vform"]["subject"];
+var description = document.forms["vform"]["description"];
+var timeline = document.forms["vform"]["timeline"];
+var budget = document.forms["vform"]["budget"];
+
+//GETTING ALL ERROR DISPLAY OBJECTS
+var username_error = document.getElementById("username_error");
+var email_error = document.getElementById("email_error");
+var phone_error = document.getElementById("phone_error");
+var subject_error = document.getElementById("subject_error");
+var description_error = document.getElementById("description_error");
+var timeline_error = document.getElementById("timeline_error");
+var budget_error = document.getElementById("budget_error");
+
+//SETTING ALL EVENT LISTENERS
+username.addEventListener("blur", usernameverify, true);
+email.addEventListener("blur", emailverify, true);
+phonenumber.addEventListener("blur", phonenumberverify, true);
+subject.addEventListener("blur", subjectverify, true);
+description.addEventListener("blur", descriptionverify, true);
+timeline.addEventListener("blur", timelineverify, true);
+budget.addEventListener("blur", budgetverify, true);
+
+//Validation function
+function Validate() {
+    //username validation
+    if (username.value == ""){
+        username.style.border ="1px solid red";
+        username_error.textContent ="Your full-name is required";
+        username.focus();
+        return false;
+    }
+    //email validation
+    if (email.value == ""){
+        email.style.border ="1px solid red";
+        email_error.textContent ="Your E-mail is required";
+        email.focus();
+        return false;
+    }
+     //phone-number validation
+     if (phonenumber.value == ""){
+        phonenumber.style.border ="1px solid red";
+        phone_error.textContent ="Your phone-number is required";
+        phonenumber.focus();
+        return false;
+    }
+      //subject validation
+      if (subject.value == ""){
+        subject.style.border ="1px solid red";
+        subject_error.textContent ="Subject is required";
+        subject.focus();
+        return false;
+    }
+
+     //description validation
+     if (description.value == ""){
+        description.style.border ="1px solid red";
+        description_error.textContent ="Description is required";
+        description.focus();
+        return false;
+    }
+
+     //timeline validation
+     if (timeline.value == ""){
+        timeline.style.border ="1px solid red";
+        timeline_error.textContent ="Timeline is required";
+        timeline.focus();
+        return false;
+    }
+
+  //Budget validation
+  if (budget.value == ""){
+        budget.style.border ="1px solid red";
+        budget_error.textContent ="Budget is required";
+        budget.focus();
+        return false;
+    }
+}
+//event handler funtions
+
+//username
+function usernameverify(){
+    if(username.value !=""){
+        username.style.border = "1px solid #5e6e66";
+        username_error.innerHTML = "";
+        return true;
+    }
+}
+//email
+function emailverify(){
+    if(email.value !=""){
+        email.style.border = "1px solid #5e6e66";
+        email_error.innerHTML = "";
+        return true;
+    }
+}
+//phone-number
+function phonenumberverify(){
+    if(phonenumber.value !=""){
+        phonenumber.style.border = "1px solid #5e6e66";
+        phone_error.innerHTML = "";
+        return true;
+    }
+}
+//subject
+function subjectverify(){
+    if(subject.value !=""){
+        subject.style.border = "1px solid #5e6e66";
+        subject_error.innerHTML = "";
+        return true;
+    }
+}
+//description
+function descriptionverify(){
+    if(description.value !=""){
+        description.style.border = "1px solid #5e6e66";
+        description_error.innerHTML = "";
+        return true;
+    }
+}
+//timeline
+function timelineverify(){
+    if(timeline.value !=""){
+        timeline.style.border = "1px solid #5e6e66";
+        timeline_error.innerHTML = "";
+        return true;
+    }
+}
+//budget
+function budgetverify(){
+    if(budget.value !=""){
+        budget.style.border = "1px solid #5e6e66";
+        budget_error.innerHTML = "";
+        return true;
+    }
+}
+</script>
+
  <!-- Submit the Form to Google Using "AJAX" -->
  <script data-cfasync="false" src="form-submission-handler.js"></script>
 
@@ -484,10 +653,8 @@ src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-s
     $('.menu').click(function(){
     $('ul').toggleClass('active');
     })
-    })</script>
+    })
 
-
-   
-    
+    </script>  
 </body>
 </html>
