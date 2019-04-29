@@ -26,35 +26,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <!--<script src="formtomail.js"></script>-->
 
-        <!--<script>
-                $(document).ready(function(){
-                    $(form).submit(function(event){
-                        event.preventDefault();
-                        var name = $("#inputName").val();
-                        var email = $("#inputEmail").val();
-                        var phonenumber = $("#inputPhonenumber").val();
-                        var subject = $("#inputSubject").val();
-                        var description = $("#inputDescription").val();
-                        var timeline = $("#inputTimeline").val();
-                        var budget = $("#inputBudget").val();
-                        var submit = $("#mailSubmit").val();
-                        $(".form-message").submit("devmoki@gmail.com",{
-                            name:name,
-                            email:email,
-                            phonenumber:phonenumber,
-                            subject:subject,
-                            description:description,
-                            timeline:timeline,
-                            budget:budget,
-                            submit:submit
-                        });
-                    });
-                });
-                
-    
-            </script>-->
     </head>
     <body>
 
@@ -465,9 +437,8 @@
 
                            <!--Button-->
                             <div class="form-group">
-                                <button id="mailSubmit"class="btn btn-success text-white" 
-                                onclick = "get('Your request has been fully submitted, I get back to you within 24hrs')"
-                                type="submit" name="submit">Submit</button>
+                                <button id="mailSubmit" class="btn btn-success text-green" 
+                                onClick="Confirm(this.vform)" type="submit" name="submit">Submit</button>
                             </div>
                             <!-- Customise the Thankyou Message People See when they submit the form: -->
                             <div style="display:none;" id="thankyou_message">
