@@ -361,7 +361,7 @@
 
         <form id="Hire" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
         action="https://script.google.com/macros/s/AKfycbzh-OheVndn5a8LWUdQRKhPV7LJrMfCBOwJUcIR/exec" name="vform"
-        onSubmit = "return Validate()">
+        onClick = "return Validate()">
         <fieldset>
 
         <!--<form id ="Hire" data-email="devmoki@gmail.com" 
@@ -437,16 +437,20 @@
 
                            <!--Button-->
                             <div class="form-group">
-                                <button id="mailSubmit" class="btn btn-success text-green" 
-                                onClick="Confirm(this.vform)" type="submit" name="submit">Submit</button>
+                             <button id="mailSubmit" class="btn btn-success text-green" type="submit" name="submit"
+                             onClick=  "alert('Thank you for the job, I will get back to you within 24hrs, kindly click ok button below to submit your request.');">Submit </button> 
                             </div>
-                            <!-- Customise the Thankyou Message People See when they submit the form: -->
+
+                            <!--JAVASCRIPT CODE FOR SUCCESS-->
+
+                            <!-- Customise the Thankyou Message People See when they submit the form: 
                             <div style="display:none;" id="thankyou_message">
                                 <h2>
                                     <em>Thanks</em> for contacting me!
                                     I will get back to you within 24hrs!
                                 </h2>
-                            </div>
+                            </div>-->
+
                         </div>
                     </div>
                 </div>
@@ -541,6 +545,7 @@ function Validate() {
         return false;
     }
 }
+
 //event handler funtions
 
 //username
@@ -600,6 +605,8 @@ function budgetverify(){
     }
 }
 </script>
+
+
 
  <!-- Submit the Form to Google Using "AJAX" -->
  <script data-cfasync="false" src="form-submission-handler.js"></script>
