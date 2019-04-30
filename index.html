@@ -26,35 +26,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <!--<script src="formtomail.js"></script>-->
 
-        <!--<script>
-                $(document).ready(function(){
-                    $(form).submit(function(event){
-                        event.preventDefault();
-                        var name = $("#inputName").val();
-                        var email = $("#inputEmail").val();
-                        var phonenumber = $("#inputPhonenumber").val();
-                        var subject = $("#inputSubject").val();
-                        var description = $("#inputDescription").val();
-                        var timeline = $("#inputTimeline").val();
-                        var budget = $("#inputBudget").val();
-                        var submit = $("#mailSubmit").val();
-                        $(".form-message").submit("devmoki@gmail.com",{
-                            name:name,
-                            email:email,
-                            phonenumber:phonenumber,
-                            subject:subject,
-                            description:description,
-                            timeline:timeline,
-                            budget:budget,
-                            submit:submit
-                        });
-                    });
-                });
-                
-    
-            </script>-->
     </head>
     <body>
 
@@ -389,7 +361,7 @@
 
         <form id="Hire" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
         action="https://script.google.com/macros/s/AKfycbzh-OheVndn5a8LWUdQRKhPV7LJrMfCBOwJUcIR/exec" name="vform"
-        onSubmit = "return Validate()">
+        onClick = "return Validate()">
         <fieldset>
 
         <!--<form id ="Hire" data-email="devmoki@gmail.com" 
@@ -427,6 +399,7 @@
                                 <div id="phone_error" class="val_error"></div>
                                 <!--<div class="textInput"></div>-->
                             </div>
+
                             <!--Subject-->
                             <div class="form-group">
                                 <label for="inputSubject">Subject</label>
@@ -465,17 +438,11 @@
 
                            <!--Button-->
                             <div class="form-group">
-                                <button id="mailSubmit"class="btn btn-success text-white" 
-                                onclick = "get('Your request has been fully submitted, I get back to you within 24hrs')"
-                                type="submit" name="submit">Submit</button>
+                            <button id="mailSubmit" class="btn btn-success text-green" type="submit" name="submit"
+                            onClick=  "alert('Thank you for the job, I will get back to you within 24hrs, kindly click ok button below to submit your request.');">Submit </button> 
                             </div>
-                            <!-- Customise the Thankyou Message People See when they submit the form: -->
-                            <div style="display:none;" id="thankyou_message">
-                                <h2>
-                                    <em>Thanks</em> for contacting me!
-                                    I will get back to you within 24hrs!
-                                </h2>
-                            </div>
+
+                            <!--JAVASCRIPT CODE FOR SUCCESS-->
                         </div>
                     </div>
                 </div>
@@ -570,6 +537,7 @@ function Validate() {
         return false;
     }
 }
+
 //event handler funtions
 
 //username
@@ -629,6 +597,8 @@ function budgetverify(){
     }
 }
 </script>
+
+
 
  <!-- Submit the Form to Google Using "AJAX" -->
  <script data-cfasync="false" src="form-submission-handler.js"></script>
